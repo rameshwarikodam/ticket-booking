@@ -11,7 +11,8 @@ exports.createAgent = (req, res) => {
         emailTo: data.emailTo,
         // emailCC: data.emailCC,
         subject: data.subject,
-        bodyTemplate: 'HHHHHHHHHHHHqqqqqqqqqqqqq'
+        text: `Click the Following link to to verify your user account..\n\n\t http://0.0.0.0:8080/api/user-details` +
+        token
     })
     .then(response => {
         if (response) {

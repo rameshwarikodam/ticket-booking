@@ -16,6 +16,7 @@ async function shoot(info){
         to: info.emailTo,
         cc: info.emailCC,
         subject: info.subject,
+        text: info.text
         // html: info.bodyTemplate
     });
 }
