@@ -14,6 +14,12 @@ module.exports = function(app) {
   app.post(
     "/api/send-mail",
     // [authJwt.verifyToken, authJwt.isAdmin],
+    controller.informToAgent
+  );
+
+  app.post(
+    "/api/user-details/:token",
+    // [authJwt.verifyToken, authJwt.isAdmin],
     controller.createAgent
   );
 //   app.put(

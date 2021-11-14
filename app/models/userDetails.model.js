@@ -11,6 +11,9 @@ module.exports = (sequelize, Sequelize) => {
       },
       phone_number: {
         type: Sequelize.STRING,
+      },
+      isRegistered: {
+        type: Sequelize.BOOLEAN
       }
     });
     return Userdetail;
