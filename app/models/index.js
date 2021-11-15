@@ -51,6 +51,6 @@ db.user.hasOne(db.Userdetail, {
   foreignKey: 'userId', targetKey: 'id'
 });
 
-db.ROLES = ["user", "admin"];
+db.ROLES = ["Super Admin", "Agent"];
 
 module.exports = db;

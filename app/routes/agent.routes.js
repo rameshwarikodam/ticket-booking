@@ -1,5 +1,5 @@
+const { verifySignUp } = require("../middleware");
 const { authJwt } = require("../middleware");
-const { productMiddleware } = require("../middleware")
 const controller = require("../controllers/agent.controller");
 
 module.exports = function(app) {
@@ -13,13 +13,12 @@ module.exports = function(app) {
 
   app.post(
     "/api/send-mail",
-    // [authJwt.verifyToken, authJwt.isAdmin],
     controller.informToAgent
   );
 
   app.post(
-    "/api/user-details/:token",
-    // [authJwt.verifyToken, authJwt.isAdmin],
+    "/api/user-details",
+    [authJwt.verifyToken],
     controller.createAgent
   );
 //   app.put(
